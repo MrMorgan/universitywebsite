@@ -26,6 +26,11 @@
     <%= form.collection_select :course_id, Course.all, :id, :name %>
   </div>
 
+  <div class "field">
+    <%= form.label :room_number %>
+    <%= form.text_field :room_number %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

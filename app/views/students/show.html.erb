@@ -3,6 +3,11 @@
 <p>
   <strong>Name:</strong>
   <%= @student.name %>
+  <ul>
+  <% @student.sections.each do |s|%>
+    <li><%= s.full_name %></li>
+  <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

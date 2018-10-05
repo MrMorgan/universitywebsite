@@ -8,6 +8,7 @@
       <th>Number</th>
       <th>Semester</th>
       <th>Course</th>
+      <th>Room Number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= section.number %></td>
         <td><%= section.semester %></td>
         <td><%= section.course.name %></td>
+        <td><%= section.room_number %></td>
         <td><%= link_to 'Show', section %></td>
         <td><%= link_to 'Edit', edit_section_path(section) %></td>
         <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
