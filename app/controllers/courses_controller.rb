@@ -21,6 +21,11 @@ class CoursesController < ApplicationController
   def edit
   end
 
+  def search
+    @course = Course.where("name like ?","%#{params[:query]}%")
+    render :index
+  end
+
   # POST /courses
   # POST /courses.json
   def create

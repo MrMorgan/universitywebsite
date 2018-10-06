@@ -21,6 +21,11 @@ class SectionsController < ApplicationController
   def edit
   end
 
+  def search
+   @controllers = Controller.where("name like?","%#{params[:query]}%")
+   render :index
+  end
+
   # POST /sections
   # POST /sections.json
   def create

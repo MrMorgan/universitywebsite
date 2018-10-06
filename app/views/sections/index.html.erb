@@ -30,4 +30,21 @@
 
 <br>
 
+<%= form_tag(sections_url,method:"get")do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br/><div id="results"></div>
+
+<script>
+var = QueryURL = "http://localhost:3000/sections/search.json?query=";
+var ResultsDiv = "results";
+var Field = "course.name";
+var QueryTag = "query";
+</script>
+
+<script type="text/javascript" src="/javascripts/AJAXSearch.js"></script>
+
 <%= link_to 'New Section', new_section_path %>
