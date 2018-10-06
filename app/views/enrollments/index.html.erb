@@ -26,8 +26,8 @@
 
 <br>
 
-<%= form_tag(enrollments_url,method: "get") do %>
- <%= label_tag(:query,"Search for:") %>
+<%= form_tag(search_enrollments_url, method: "get") do %>
+ <%= label_tag(:query, "Search for:") %>
  <%= text_field_tag(:query) %>
  <%= submit_tag("Search") %>
 <% end %>

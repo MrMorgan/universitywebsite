@@ -26,7 +26,7 @@
 
 <br>
 
-<%= form_tag(courses_url,method:"get") do %>
+<%= form_tag(search_courses_url,method:"get") do %>
   <%= label_tag(:query, "Search for:") %>
   <%= text_field_tag(:query) %>
   <%= submit_tag("Search")%>
@@ -41,6 +41,6 @@ var Field = "name";
 var QueryTag = "query";
 </script>
 
-<script type="text/javascriptf" src="/javascripts/AJAXSearch.js"></script>
+<script type="text/javascript" src="/javascripts/AJAXSearch.js"></script>
 
 <%= link_to 'New Course', new_course_path %>
