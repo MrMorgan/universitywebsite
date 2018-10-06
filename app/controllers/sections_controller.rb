@@ -22,7 +22,7 @@ class SectionsController < ApplicationController
   end
 
   def search
-   @controllers = Controller.where("name like?","%#{params[:query]}%")
+   @sections = Section.where("number like ?","%#{params[:query]}%")
    render :index
   end
 
@@ -74,6 +74,6 @@ class SectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def section_params
-      params.require(:section).permit(:number, :semester, :course_id, :room_number, :student_ids => [])
+      params.require(:section).permit(:number, :semester, :course_id, :room_number, :student_ids => [] )
     end
 end

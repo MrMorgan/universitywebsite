@@ -5,7 +5,7 @@ class Section < ApplicationRecord
   has_many :enrollments, dependent: :destroy
   has_many :students, through: :enrollments
 
-  def full_name
-    "#{course.name} #{number}"
+  def name
+    "#{course.name}-#{number}"
   end
 end
