@@ -6,6 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Department</th>
+      <th>Course Number</th>
       <th>Credits</th>
       <th colspan="3"></th>
     </tr>
@@ -15,6 +17,8 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.name %></td>
+        <td><%= course.department %></td>
+        <td><%= course.number %></td>
         <td><%= course.credits %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
