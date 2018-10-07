@@ -22,7 +22,7 @@ class CoursesController < ApplicationController
   end
 
   def search
-    @courses = Course.where("name like ?","%#{params[:query]}%")
+    @courses = Course.where("name like ? OR department like ? OR number like ? OR credits like ?","%#{params[:query]}%", "%#{params[:query]}%", "%#{params[:query]}%", "%#{params[:query]}%")
     render :index
   end
 

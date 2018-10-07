@@ -22,7 +22,7 @@ class SectionsController < ApplicationController
   end
 
   def search
-   @sections = Section.where("number like ?","%#{params[:query]}%")
+   @sections = Section.joins(:course).where("courses.name LIKE ? or sections.semester like ? or sections.room_number like ?","%#{params[:query]}%","%#{params[:query]}%", "%#{params[:query]}%") 
    render :index
   end
 

@@ -22,7 +22,7 @@ class EnrollmentsController < ApplicationController
   end
 
   def search
-    @enrollments = Enrollment.where("name like ?","%#{params[:query]}%")
+    @enrollments = Enrollment.joins(:student, section: :course).where("students.name like ? or courses.name like ?","%#{params[:query]}%", "%#{params[:query]}%")
     render :index
   end
 
