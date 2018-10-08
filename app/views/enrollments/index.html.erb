@@ -2,6 +2,14 @@
 
 <h1>Enrollments</h1>
 
+<%= form_tag(search_courses_url,method:"get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search")%>
+<% end %>
+
+<br/><div id="results"></div>
+
 <table>
   <thead>
     <tr>
@@ -26,13 +34,6 @@
 
 <br>
 
-<%= form_tag(search_enrollments_url, method: "get") do %>
- <%= label_tag(:query, "Search for:") %>
- <%= text_field_tag(:query) %>
- <%= submit_tag("Search") %>
-<% end %>
-
-<br/><div id="results"></div>
 
 <script>
 var QueryURL = "http://localhost:3000/enrollments/search.json?query=";
