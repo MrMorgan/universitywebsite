@@ -13,8 +13,14 @@ class EnrollmentTest < ActiveSupport::TestCase
   end
 
   test "can create new enrollment" do
-     enrollment = Enrollment.new( section: sections(:one).section,
-                                  student: sections(:two).student)
+     enrollment = Enrollment.new( section: enrollments(:one).section,
+                                  student: enrollments(:two).student)
     assert enrollment.valid?
+  end
+
+  test "cannot create duplicate enrollemnt" do
+    enrollment = Enrollment.new( section: enrollments(:one).section,
+                                 student: enrollments(:one).student)
+    assert enrollment.invalid?
   end
 end
