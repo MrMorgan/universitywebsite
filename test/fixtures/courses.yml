@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  credits: 1
+web:
+  name: Web Apps
+  department: Computer Science
+  number: 390p
+  credits: 4
 
-two:
-  name: MyString
-  credits: 1
+calc:
+  name: Calculus
+  department: Mathematics
+  number: 2050
+  credits: 4

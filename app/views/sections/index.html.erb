@@ -2,6 +2,15 @@
 
 <h1>Sections</h1>
 
+
+<%= form_tag(search_sections_url, method: "get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<br/><div id="results"></div>
+
 <table>
   <thead>
     <tr>
@@ -30,13 +39,6 @@
 
 <br>
 
-<%= form_tag(search_sections_url, method: "get") do %>
-  <%= label_tag(:query, "Search for:") %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-<br/><div id="results"></div>
 
 <script>
 var = QueryURL = "http://localhost:3000/sections/search.json?query=";

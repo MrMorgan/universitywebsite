@@ -2,10 +2,12 @@
 
 one:
   number: 1
-  semester: MyString
-  course: one
+  semester: Fall
+  course: web
+  room_number: 102
 
 two:
   number: 1
-  semester: MyString
-  course: two
+  semester: Spring
+  course: calc
+  room_number: 201

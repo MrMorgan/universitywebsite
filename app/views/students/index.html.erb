@@ -2,6 +2,14 @@
 
 <h1>Students</h1>
 
+<%= form_tag(search_students_url, method: "get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search")%>
+<% end %>
+
+<br><div id="results"></div>
+
 <table>
   <thead>
     <tr>
@@ -27,14 +35,6 @@
 </table>
 
 <br>
-
-<%= form_tag(search_students_url, method: "get") do %>
-  <%= label_tag(:query, "Search for:") %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag("Search")%>
-<% end %>
-
-<br><div id="results"></div>
 
 <script>
 var QueryURL = "http://localhost:3000/students/search.json?query=";
