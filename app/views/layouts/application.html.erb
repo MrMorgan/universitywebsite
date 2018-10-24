@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <div id="navBar">
+    <ul>
+    <li><a><%= link_to "Courses", courses_path %></a><li>
+    <li><a><%= link_to "Students", students_path %></a></li>
+    <li><a><%= link_to "Sections", sections_path %></a></li>
+    <ul>
+    </div>
+
+
     <%= yield %>
   </body>
 </html>
