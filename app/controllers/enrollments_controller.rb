@@ -59,6 +59,7 @@ class EnrollmentsController < ApplicationController
   # DELETE /enrollments/1
   # DELETE /enrollments/1.json
   def destroy
+    @enrollment = Enrollment.find params[:id]
     @enrollment.destroy
     respond_to do |format|
       format.html { redirect_to enrollments_url, notice: 'Enrollment was successfully destroyed.' }
